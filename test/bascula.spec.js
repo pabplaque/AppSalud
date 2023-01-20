@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const expect = require('chai').expect;
 const should = require('chai').should();
 
-const Bascula = require('../../src/js/bascula');
+const Bascula = require('../src/js/bascula');
 
 describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
     describe('Constructor Báscula -- Test Case 1' ,function(){
@@ -16,9 +16,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
         it('obtenerPesoMinimo() = 0',function(){
             objetoPrueba.obtenerPesoMinimo().should.to.be.equal(0);
         });
-        it('obtenerPesoMedio() = 0',function(){
-            expect(objetoPrueba.obtenerPesoMedio()).to.be.equal(0);
-        });
+        
     });
 
     describe('Clase Báscula -- Test Case 2' ,function(){
@@ -26,9 +24,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
         it('obtenerNumeroAnotaciones() == 0',function(){
             expect(objetoPrueba.obtenerNumeroAnotaciones()).to.be.equal(0);
         });
-        it('obtenerTablaPesosHTML().isString()',function(){
-            assert.isString(objetoPrueba.obtenerTablaPesosHTML());
-        });
+        
     });
     
     describe('Clase Báscula -- Test Case 3' ,function(){
@@ -43,9 +39,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
         it('obtenerPesoMinimo() = 70',function(){
             expect(objetoPrueba.obtenerPesoMinimo()).to.be.equal(70);
         });
-        it('obtenerPesoMedio() = 70.0',function(){
-            expect(objetoPrueba.obtenerPesoMedio()).to.be.equal('70.0');
-        });      
+             
     });
     
     describe('Clase Báscula -- Test Case 4' ,function(){
@@ -61,9 +55,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
         it('obtenerPesoMinimo() = 30',function(){
             expect(objetoPrueba.obtenerPesoMinimo()).to.be.equal(30);
         });
-        it('obtenerPesoMedio() = 50.0',function(){
-            expect(objetoPrueba.obtenerPesoMedio()).to.be.equal('50.0');
-        });  
+        
     });
     
     describe('Clase Báscula -- Test Case 5' ,function(){

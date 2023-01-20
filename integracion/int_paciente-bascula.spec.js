@@ -6,7 +6,7 @@ const Bascula = require('../../src/js/bascula');
 describe('Integration Suite -- Integración Paciente-Bascula',function(){
     describe('Paciente-Bascula - Test Case 1' ,function(){
         var objPaciente,objBascula;
-        it('Consstuctor new Paciente()',function(){
+        it('Constuctor new Paciente()',function(){
             objPaciente=new Paciente('Pedro','Ruiz del Castillo','16/02/1983');
             const saludo=objPaciente.saludar();
             assert.isString(saludo);

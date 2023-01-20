@@ -15,7 +15,7 @@ class Bascula{
     {
         this.pesos=new Array();
         this.alturas=new Array();
-        this.fechas=new Array()
+        this.fechas=new Array();
         this.anotaciones=0;
     }
 
@@ -25,7 +25,7 @@ class Bascula{
 
     obtenerNumeroAnotaciones(){
 
-        return this.anotaciones
+        return this.anotaciones;
     } 
     /**
      * Permite anotar un nuevo peso, es obligatorio proporcionar un peso (en kg.) 
@@ -45,15 +45,24 @@ class Bascula{
     */
 
     obtenerPesoMaximo(){
-        return this.pesos.Array.max()
+      if (this.pesos.length == 0){
+        return 0;
+       } 
+       else {
+        return this.pesos.Array.max();
     }
-    
+  }
     /*
     * Devuelve el menor de los pesos que tiene registrados la Báscula.
     */
     
     obtenerPesoMinimo(){
-        return this.pesos.Array.min()
+      if (this.pesos.length == 0){
+        return 0;
+       } 
+       else {
+        return this.pesos.Array.min();
+    }
     }
 
     /*
@@ -65,7 +74,7 @@ class Bascula{
         up=p.slice(-1);
         ua=a.slice(-1);
         imc=up/Math.pow(ua,2);
-        return imc
+        return imc;
     } 
 
     /*
