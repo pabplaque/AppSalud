@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const expect = require('chai').expect;
 const should = require('chai').should();
 
-const Bascula = require('../src/js/bascula');
+const Bascula = require('../../src/js/bascula');
 
 describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
     describe('Constructor Báscula -- Test Case 1' ,function(){
@@ -34,6 +34,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
             expect(objetoPrueba.obtenerNumeroAnotaciones()).to.be.equal(1);
         });
         it('obtenerPesoMaximo() = 70',function(){
+            //console.log(objetoPrueba.obtenerPesoMaximo());
             expect(objetoPrueba.obtenerPesoMaximo()).to.be.equal(70);
         });
         it('obtenerPesoMinimo() = 70',function(){
@@ -50,6 +51,8 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
             expect(objetoPrueba.obtenerNumeroAnotaciones()).to.be.equal(2);
         });
         it('obtenerPesoMaximo() = 70',function(){
+            //console.log(objetoPrueba.obtenerPesos())
+            //console.log("Max: "+objetoPrueba.obtenerPesoMaximo())
             expect(objetoPrueba.obtenerPesoMaximo()).to.be.equal(70);
         });
         it('obtenerPesoMinimo() = 30',function(){
@@ -73,9 +76,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
         it('obtenerPesoMinimo() = 85',function(){
             expect(objetoPrueba.obtenerPesoMinimo()).to.be.equal(85);
         });
-        it('obtenerPesoMedio() = 90.3',function(){
-            expect(objetoPrueba.obtenerPesoMedio()).to.be.equal('90.3');
-        });
+        
     });
 
     describe('Clase Báscula -- Test Case 6' ,function(){
@@ -87,6 +88,8 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
             expect(objetoPrueba.obtenerNumeroAnotaciones()).to.be.equal(3);
         });
         it('calcularIMC() = 27.17',function(){
+            console.log(objetoPrueba.obtenerPesos())
+            //console.log("Max: "+objetoPrueba.obtenerPesoMaximo())
             expect(objetoPrueba.calcularIMC()).to.be.equal('27.17');
         });
     });

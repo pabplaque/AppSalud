@@ -1,6 +1,9 @@
-/*
+const Bascula=require('./bascula');
 
-*/
+/**
+ * Clase Paciente
+ * @author: Pablo Plaza Quesada
+ */
 
 class Paciente{
     nombre= null;

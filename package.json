@@ -4,7 +4,7 @@
   "description": "Practica 3 ejercicio bascula y pruebas mocha chai",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/unitarias test/integracion"
   },
   "repository": {
     "type": "git",

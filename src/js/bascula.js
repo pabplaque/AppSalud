@@ -49,7 +49,8 @@ class Bascula{
         return 0;
        } 
        else {
-        return this.pesos.Array.max();
+        var m=Math.max.apply(null,this.pesos);
+       return m; 
     }
   }
     /*
@@ -61,7 +62,8 @@ class Bascula{
         return 0;
        } 
        else {
-        return this.pesos.Array.min();
+        return Math.min.apply(null,this.pesos);
+       
     }
     }
 
@@ -118,6 +120,11 @@ class Bascula{
                    }        
                    return calificacion              
 
+    }
+
+    obtenerPesos()
+    {
+      return this.pesos;
     }
 
 }
