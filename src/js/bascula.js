@@ -98,6 +98,7 @@ class Bascula{
       }else if(imc<16){
         return "<16.00: Infrapeso (delgadez severa)";
       }else if(imc >= 16 && imc< 17){
+        //ddd
         return "16.00 – 16.99: Infrapeso (delgadez moderada)";
       }else if(imc >= 17 && imc< 18.5){
         return "17.00 - 18.49: Infrapeso (delgadez aceptable)";
