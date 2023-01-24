@@ -72,11 +72,12 @@ class Bascula{
     *IMC = peso / altura 2
     */
 
-    calcularIMC(p,a){
-        up=p.slice(-1);
-        ua=a.slice(-1);
-        imc=up/Math.pow(ua,2);
-        return imc;
+    calcularIMC(){
+      const lp = this.pesos[this.pesos.length-1];
+      const la = this.alturas[this.alturas.length-1];
+      var imc=lp/Math.pow(la,2) ;
+     
+      return imc.toFixed(2);
     } 
 
     /*
@@ -92,9 +93,9 @@ class Bascula{
     */
 
     describirIMC(imc){
-    switch(imc){
+      switch(imc){
         case imc<16:
-            calificacion = "Infrapeso (delgadez severa)";
+  calificacion = "<16.00: Infrapeso (delgadez severa)";
               break;
             case imc>16 && imc<17:
             calificacion = "Infrapeso (delgadez moderada)";
@@ -123,8 +124,14 @@ class Bascula{
     }
 
     obtenerPesos()
-    {
+        {
       return this.pesos;
+    }
+    obtenerAlturas(){
+      return this.alturas;
+    }
+    obtenerUltimoPeso(){
+      return this.pesos[this.pesos.length-1];
     }
 
 }
