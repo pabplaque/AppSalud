@@ -88,7 +88,10 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
             expect(objetoPrueba.obtenerNumeroAnotaciones()).to.be.equal(3);
         });
         it('calcularIMC() = 27.17',function(){
-            console.log(objetoPrueba.obtenerPesos())
+            //console.log(objetoPrueba.obtenerPesos());
+            //console.log(objetoPrueba.obtenerAlturas());
+            //console.log("IMC: "+objetoPrueba.calcularIMC())
+            //console.log(objetoPrueba.obtenerAlturas());
             //console.log("Max: "+objetoPrueba.obtenerPesoMaximo())
             expect(objetoPrueba.calcularIMC()).to.be.equal('27.17');
         });
