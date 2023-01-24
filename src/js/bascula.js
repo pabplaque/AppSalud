@@ -93,33 +93,19 @@ class Bascula{
     */
 
     describirIMC(imc){
-      switch(imc){
-        case imc<16:
-  calificacion = "<16.00: Infrapeso (delgadez severa)";
-              break;
-            case imc>16 && imc<17:
-            calificacion = "Infrapeso (delgadez moderada)";
-            break;
-            case imc>17 && imc<18.5:
-            calificacion = "Infrapeso (delgadez aceptable)";
-              break;
-            case imc>18.5 && imc<25:
-            calificacion = "Peso normal";
-              break;
-            case imc>25 && imc<30:
-            calificacion = "Sobrepeso";
-              break;
-            case imc>30 && imc<35:
-            calificacion = "Obeso (Tipo I)";
-              break;
-            case imc>35 && imc<40:
-              calificacion = "Obeso (Tipo II)";
-              break;
-              case imc<40:
-              calificacion = "Obeso (Tipo III)";
-              break;
-                   }        
-                   return calificacion              
+      if(imc<1){
+        return "El método debe devolver una cadena";
+      }else if(imc<16){
+        return "<16.00: Infrapeso (delgadez severa)";
+      }else if(imc >= 16 && imc< 17){
+        return "16.00 – 16.99: Infrapeso (delgadez moderada)";
+      }else if(imc >= 17 && imc< 18.5){
+        return "17.00 - 18.49: Infrapeso (delgadez aceptable)";
+      }else if(imc >= 18.5 && imc< 25){
+        return "18.50 - 24.99: Peso normal";
+      }
+
+        
 
     }
 
