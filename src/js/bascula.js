@@ -114,6 +114,9 @@ class Bascula{
       }
       
       }
+      else {
+        mayor
+      }
 
         
 
