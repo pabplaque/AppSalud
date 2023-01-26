@@ -88,18 +88,13 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
             expect(objetoPrueba.obtenerNumeroAnotaciones()).to.be.equal(3);
         });
         it('calcularIMC() = 27.17',function(){
-            //console.log(objetoPrueba.obtenerPesos());
-            //console.log(objetoPrueba.obtenerAlturas());
-            //console.log("IMC: "+objetoPrueba.calcularIMC())
-            //console.log(objetoPrueba.obtenerAlturas());
-            //console.log("Max: "+objetoPrueba.obtenerPesoMaximo())
             expect(objetoPrueba.calcularIMC()).to.be.equal('27.17');
         });
     });
     describe('Clase Báscula: describirIMC(imc) -- Test Case 7' ,function(){
         it('describirIMC(0) devuelve una cadena',function(){
             assert.isString(Bascula.describirIMC(0), "El método debe devolver una cadena"); 
-            console.log("IMC: "+objetoPrueba.obtenerimc());
+        
         });
         it('describirIMC(1) = <16.00: Infrapeso (delgadez severa)',function(){
            Bascula.describirIMC(1).should.to.be.equal("<16.00: Infrapeso (delgadez severa)"); 
