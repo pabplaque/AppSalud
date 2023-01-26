@@ -128,7 +128,7 @@ class Bascula{
       return this.pesos[this.pesos.length-1];
     }
     obtenerimc(){
-      return describirIMC(0);
+      return describirIMC();
     }
 
 }
