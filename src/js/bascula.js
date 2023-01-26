@@ -110,7 +110,7 @@ class Bascula{
       }  
      
       else {
-        return mayor
+        return "mayor"
       }
 
         
@@ -126,6 +126,9 @@ class Bascula{
     }
     obtenerUltimoPeso(){
       return this.pesos[this.pesos.length-1];
+    }
+    obtenerimc(){
+      return describirIMC(0);
     }
 
 }
