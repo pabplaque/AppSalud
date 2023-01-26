@@ -99,7 +99,7 @@ describe('Main Suite -- Pruebas Unitarias Clase Bascula',function(){
     describe('Clase Báscula: describirIMC(imc) -- Test Case 7' ,function(){
         it('describirIMC(0) devuelve una cadena',function(){
             assert.isString(Bascula.describirIMC(0), "El método debe devolver una cadena"); 
-            console.log(objetoPrueba.obtenerPesos());
+            console.log("IMC: "+objetoPrueba.obtenerimc());
         });
         it('describirIMC(1) = <16.00: Infrapeso (delgadez severa)',function(){
            Bascula.describirIMC(1).should.to.be.equal("<16.00: Infrapeso (delgadez severa)"); 
