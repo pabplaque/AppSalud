@@ -84,11 +84,16 @@ class Paciente{
     */
 
     obtenerEdad(){
-        nac=this.fechanacimiento;
-        anac=nac.getFullYear();
-        act=new Date();
-        aact=act.getFullYear();
-        edad=aact-anac;
+        var nac=this.fechanacimiento;
+        var anac=nac.getFullYear();
+        var act=new Date();
+        var aact=act.getFullYear();
+        var edad=aact-anac;
+        if (nac.getMonth() > (act.getMonth()) || nac.getDay() > act.getDay()){
+            edad--;
+        }
+        
+
         return edad;
                
     }
@@ -117,6 +122,13 @@ class Paciente{
     calcularIMC(){
         return this.registroBascula.calcularIMC();          
     }
+
+    obtenerano(){
+        return typeof (this.fechanacimiento);
+        //return this.fechanacimiento.getFullYear();
+        //return this.fechanacimiento;
+        //return new Date();
+      }
 
 }
 

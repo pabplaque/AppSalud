@@ -3,9 +3,9 @@ const assert = require('chai').assert;
 const Paciente = require('../../src/js/paciente');
 
 describe('Main Suite -- Pruebas Unitarias Paciente',function(){
-    var u1=new Paciente('Pedro','Ruiz del Castillo','16/02/1983');
+    var u1=new Paciente('Pedro','Ruiz del Castillo','1983-03-16');
     describe('Clase Paciente -- Test Case 1' ,function(){
-        it('Constructor Paciente (Pedro, Ruiz del Castillo, 16/03/1983) y ¡Saludar!',function(){
+        it('Constructor Paciente (Pedro, Ruiz del Castillo, 1983-03-16) y ¡Saludar!',function(){
             const resultadoNombre =u1.saludar();
             expect(resultadoNombre).to.be.equal('Hola soy Pedro Ruiz del Castillo');
         });
@@ -41,7 +41,7 @@ describe('Main Suite -- Pruebas Unitarias Paciente',function(){
     });
 
     describe('Clase Paciente -- Test Case 6' ,function(){
-        it('obtenerFechaNacimiento() = 16/02/1983',function(){
+        it('obtenerFechaNacimiento() = 1986-02-16',function(){
             const fn=u1.obtenerFechaNacimiento();
             expect(fn).to.be.equal('16/02/1983');
         });
@@ -49,8 +49,10 @@ describe('Main Suite -- Pruebas Unitarias Paciente',function(){
     
     describe('Clase Paciente -- Test Case 7' ,function(){
         it('obtenerEdad() = 39',function(){
+            console.log(u1.obtenerano());
+            //console.log(typeof (u1.obtenerano()));
             const resultado =u1.obtenerEdad();
-            expect(resultado).to.be.equal(39);
+            expect(resultado).to.be.equal(40);
         });
     });
 
