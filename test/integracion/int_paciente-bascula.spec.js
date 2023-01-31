@@ -17,6 +17,7 @@ describe('Integration Suite -- Integración Paciente-Bascula',function(){
             expect(objBascula.obtenerNumeroAnotaciones()).to.be.equal(1);
         });
         it('objPaciente.calcularIMC()',function(){
+            console.log(objPaciente.calcularIMC());
             expect(objPaciente.calcularIMC()).to.be.equal(-1);
         });
         it('objPaciente.modificarBascula(objBascula)',function(){

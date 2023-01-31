@@ -41,39 +41,41 @@ describe('Main Suite -- Pruebas Unitarias Paciente',function(){
     });
 
     describe('Clase Paciente -- Test Case 6' ,function(){
-        it('obtenerFechaNacimiento() = 1986-02-16',function(){
+        it('obtenerFechaNacimiento() = 1983-03-16',function(){
             const fn=u1.obtenerFechaNacimiento();
-            expect(fn).to.be.equal('16/02/1983');
+            expect(fn).to.be.equal('1983-03-16');
         });
     });
     
     describe('Clase Paciente -- Test Case 7' ,function(){
         it('obtenerEdad() = 39',function(){
-            console.log(u1.obtenerano());
+            //console.log(u1.obtenerano());
             //console.log(typeof (u1.obtenerano()));
             const resultado =u1.obtenerEdad();
-            expect(resultado).to.be.equal(40);
+            //console.log(u1.obtenerEdad());
+            expect(resultado).to.be.equal(39);
         });
     });
 
     describe('Clase Paciente -- Test Case 8' ,function(){
-        it('u2.obtenerFechaNacimiento() = 25/12/1995',function(){
-            const u2=new Paciente('Jesús','Puente Colgante','25/12/1995');
+        it('u2.obtenerFechaNacimiento() = 1995-12-25',function(){
+            const u2=new Paciente('Jesús','Puente Colgante','1995-12-25');
             const fn=u2.obtenerFechaNacimiento();
-            expect(fn).to.be.equal('25/12/1995');
+            expect(fn).to.be.equal('1995-12-25');
         });
     });
 
     describe('Clase Paciente -- Test Case 9' ,function(){
-        const u2=new Paciente('Almudena','Puente Colgante','20/08/1990');
-        it('u2.obtenerFechaNacimiento() = 20/08/1990',function(){
+        const u2=new Paciente('Almudena','Puente Colgante','1990-08-20');
+        it('u2.obtenerFechaNacimiento() = 1990-08-20',function(){
             const fn=u2.obtenerFechaNacimiento();
-            expect(fn).to.be.equal('20/08/1990');
+            expect(fn).to.be.equal('1990-08-20');
         });
 
-        it('u2.obtenerEdad() = 31',function(){
+        it('u2.obtenerEdad() = 32',function(){
+            //console.log(u2.obtenerEdad());
             const edad=u2.obtenerEdad();
-            expect(edad).to.be.equal(31);
+            expect(edad).to.be.equal(32);
         });
     });
 });

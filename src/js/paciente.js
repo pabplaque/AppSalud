@@ -84,12 +84,17 @@ class Paciente{
     */
 
     obtenerEdad(){
-        var nac=this.fechanacimiento;
-        var anac=nac.getFullYear();
+        //var nac=new date(this.fechanacimiento);
+        //var nac=Date.parse(this.fechanacimiento);
+        var nac =this.fechanacimiento.split('-');
+        var anonaci=nac[0];
+        var mesnaci=nac[1];
+        var dianaci=nac[2];
+        //var anac=nac.getFullYear();
         var act=new Date();
         var aact=act.getFullYear();
-        var edad=aact-anac;
-        if (nac.getMonth() > (act.getMonth()) || nac.getDay() > act.getDay()){
+        var edad=aact-anonaci;
+        if (mesnaci > (act.getMonth()) || dianaci > act.getDay()){
             edad--;
         }
         
@@ -124,10 +129,13 @@ class Paciente{
     }
 
     obtenerano(){
-        return typeof (this.fechanacimiento);
+        //return typeof (this.fechanacimiento);
         //return this.fechanacimiento.getFullYear();
         //return this.fechanacimiento;
-        //return new Date();
+        //fechas=Date.parse(this.fechanacimiento);
+        //return typeof (new Date(this.fechanacimiento));
+        //return typeof(fechas);
+        return edad;
       }
 
 }

@@ -7,6 +7,7 @@ class Bascula{
     alturas = null;
     fechas =null;
     anotaciones=-1;
+    imc=-1;
 
     /**
      * Constructor sin parámetros que devuelve un nuevo objeto Báscula.
@@ -106,10 +107,20 @@ class Bascula{
 
     calcularIMC()
     {
-      const lp = this.pesos[this.pesos.length-1];
-      const la = this.alturas[this.alturas.length-1];
-      var imc=lp/Math.pow(la,2) ;
-      return imc.toFixed(2);
+      if(this.anotaciones<0){
+        var res=-1;
+        var imc=Number(res);
+        return imc;
+      } else{
+        const lp = this.pesos[this.pesos.length-1];
+        const la = this.alturas[this.alturas.length-1];
+        var imc=lp/Math.pow(la,2) ;
+          return imc.toFixed(2);
+      }
+      
+      
+      
+      
     } 
 
     
