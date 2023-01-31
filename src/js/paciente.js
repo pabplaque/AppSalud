@@ -106,9 +106,9 @@ class Paciente{
     /*
     *modificarBascula(bascula): Permite modificar la báscula asociada al paciente.
     */
-
-    modificarBascula(bascula){
-        this.registroBascula=bascula;       
+    modificarBascula(b)
+    {
+        this.registroBascula=b;
     }
 
     /*
@@ -125,10 +125,15 @@ class Paciente{
     */
 
     calcularIMC(){
-        if(this.bascula==null)
-            return -1;
-        else 
-            return this.registroBascula.calcularIMC();          
+        //if(this.registroBascula==null){
+            if(this.registroBascula.anotaciones==0){
+            var res=-1;
+            var imc=Number(res);
+            return imc;
+            } else{
+                return this.registroBascula.calcularIMC(); 
+            } 
+                     
     }
 
     obtenerano(){
