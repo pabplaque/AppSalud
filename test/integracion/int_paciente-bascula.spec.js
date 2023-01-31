@@ -17,11 +17,13 @@ describe('Integration Suite -- Integración Paciente-Bascula',function(){
             expect(objBascula.obtenerNumeroAnotaciones()).to.be.equal(1);
         });
         it('objPaciente.calcularIMC()',function(){
-            console.log(objPaciente.calcularIMC());
+            //console.log(objPaciente);
+            //console.log(objPaciente.calcularIMC());
             expect(objPaciente.calcularIMC()).to.be.equal(-1);
         });
         it('objPaciente.modificarBascula(objBascula)',function(){
             objPaciente.modificarBascula(objBascula);
+            //console.log(objPaciente.calcularIMC());
             expect(objPaciente.calcularIMC()).to.be.equal('28.52');
         });
     });
