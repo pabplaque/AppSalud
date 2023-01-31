@@ -125,7 +125,10 @@ class Paciente{
     */
 
     calcularIMC(){
-        return this.registroBascula.calcularIMC();          
+        if(this.bascula==null)
+            return -1;
+        else 
+            return this.registroBascula.calcularIMC();          
     }
 
     obtenerano(){
